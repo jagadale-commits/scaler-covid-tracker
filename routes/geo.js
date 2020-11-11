@@ -32,12 +32,6 @@ function loadData() {
   })
 }
 
-/**
- * Assignment: This method takes O(N) time to search for possible matches.
- * Even though it works, its better to have a optimized approach.
- * 
- * Improve this function in a way to support higher throughput
- */
 function cityFinder(target) {
   return citiesList.filter((cityName) => cityName.toUpperCase().startsWith(target.toUpperCase()))
 }
