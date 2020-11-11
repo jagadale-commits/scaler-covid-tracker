@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-
+require('dotenv').config()
 const homeRouter = require('./routes/home');
 const geoRouter = require('./routes/geo');
 const reportsRouter = require('./routes/report');
@@ -25,11 +25,10 @@ app.use('/reports/', reportsRouter);
 
 
 const mongoose = require('mongoose');
-const { MONGODB } = require('./config.js');
 
 
 mongoose
-  .connect(MONGODB, { useNewUrlParser: true })
+  .connect(process.env.MONGODB, { useNewUrlParser: true })
   .then(() => {
     console.log('MongoDB Connected');
   })

@@ -34,7 +34,7 @@ router.route('/')
     .then( allReports => {
     res.render('pages/reports', {
       reports: allReports,
-      mapboxKey: 'pk.eyJ1Ijoiam95ZGVlcC1pYiIsImEiOiJja2I4eXhpcWEwOTEwMnVwa3ZsOGg3ZmZ1In0.oS2EZQ7fdhItSubL4NMZBA'
+      mapboxKey: process.env.MAPBOXKEY
     })
   })
 })
