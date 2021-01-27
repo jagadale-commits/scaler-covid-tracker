@@ -9,7 +9,6 @@ lerna-debug.log*
 node_modules
 npm-debug.log
 .DS_Store
-*.env
 config.js
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
